@@ -1,8 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'
 
+function testApi() {
+  axios.post('http://127.0.0.1:3001', {
+    url: 'http://127.0.0.1:3002/users/',
+    method: 'POST',
+    body: {
+      id: 'sss'
+    }
+  })
+}
 function App() {
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +29,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={testApi}>testApi</button>
       </header>
     </div>
   );
