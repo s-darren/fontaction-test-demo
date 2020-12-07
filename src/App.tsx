@@ -30,6 +30,19 @@ function App() {
           Learn React
         </a>
         <button onClick={testApi}>testApi</button>
+        <form method="post" action="http://127.0.0.1:3002/users/" className="custom=form" target="_parent">
+          <div className="custom-form-item">
+            <label htmlFor="name">Enter your name:</label>
+            <input id="name" name="name"></input>
+          </div>
+          {/* <div className="custom-form-item">
+            <label htmlFor="file">Choose your file:</label>
+            <input id="file" type="file" name="file"></input>
+          </div> */}
+          <div className="custom-form-submit-item">
+            <button className="custom-submit-button" type="submit">submit</button>
+          </div>
+        </form>
       </header>
     </div>
   );
